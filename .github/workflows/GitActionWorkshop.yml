@@ -1,0 +1,16 @@
+name: CI Example
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow on push to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use Ubuntu VM
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run a simple script
+        run: echo "Hello, GitHub Actions!"
